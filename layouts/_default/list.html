@@ -3,7 +3,7 @@
 {{end}}
 {{define "main"}}
 <ul class="post-list">
-    {{ range .Pages }}
+    {{ range (where .Pages ".Params.unlisted" "!=" "true") }}
         {{.Render "li"}}
     {{end}}
 </ul>

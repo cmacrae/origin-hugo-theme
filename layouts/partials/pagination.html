@@ -3,7 +3,7 @@
 //  OUTPUT POSTS
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 -->
-{{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
+{{ $paginator := .Paginate (where (where .Pages "Type" "posts") ".Params.unlisted" "!=" "true") }}
 
 <!--
 //

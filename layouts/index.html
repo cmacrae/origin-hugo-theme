@@ -9,18 +9,18 @@
 {{ if eq $paginator.PageNumber 1 }}
 <div class="featured-posts">
     {{ $pages := .Site.RegularPages }}
-    {{range first 3 $pages}}
+    {{range (where (first 3 $pages) ".Params.unlisted" "!=" "true") }}
         {{ partial "featured" . }}
     {{end}}
 </div>
 {{end}}
 <div class="post-list">
     {{if eq $paginator.PageNumber 1}}
-        {{ range after 3 $paginator.Pages }}
+        {{ range (where (after 3 $paginator.Pages) ".Params.unlisted" "!=" "true") }}
             {{ .Render "li" }}
         {{ end }}
     {{else}}
-        {{ range $paginator.Pages }}
+        {{ range (where $paginator.Pages ".Params.unlisted" "!=" "true") }}
             {{ .Render "li" }}
         {{ end }}
     {{end}}
@@ -30,7 +30,7 @@
 
 {{else}}
 <div class="post-list">
-    {{ range $paginator.Pages }}
+    {{ range (where $paginator.Pages ".Params.unlisted" "!=" "true") }}
         {{ .Render "li" }}
     {{ end }}
 </div>
