@@ -1,14 +1,14 @@
 @import "vars";
 
 :root {
-  --color-bg: rgba(255,247,240, 1);
-  --color-card-bg: rgba(250,250,250,0.8);
-  --color-header-bg: white;
+  --color-bg: rgba(250,250,250,0.8);
+  --color-card-bg: rgba(255,247,240, 1);
+  --color-header-bg: rgba(255,247,240, 1);
   --color-text: black;
   --color-text-2: #222222;
   --color-text-light: white;
   --color-text-light-2: rgba(255,255,255,0.9);
-  --color-link: #0F4C81;
+  --color-link: #673AB7;
   --color-hover: rgba(120,120,120,0.9);
   --color-border: rgba(120,120,120,1);
   --color-border-dark: black;
@@ -18,8 +18,9 @@
   --color-boxshadow-dark: rgba(70,70,70,1);
   --color-extra: #ffecbc;
   --color-extra-2: #fcb279;
-  --color-footer-bg: rgba(250,250,250,0.8);
+  --color-footer-bg: rgba(255,247,240, 1);
   --color-code-bg: rgba(100,100,100,1);
+  --color-code-fg: #ffab91;
   --color-table-bg: rgba(200,200,200);
   --color-blockquote: #999999;
   --color-twitter: rgb(29, 161, 242);
@@ -102,6 +103,8 @@ a {
 img {
   width: 100%;
   height: auto;
+  box-shadow: 5px 5px var(--color-boxshadow);
+  border: 1px solid var(--color-border);
 }
 
 @import "mixins";
