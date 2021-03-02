@@ -99,6 +99,11 @@ a {
   color: initial;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 @import "mixins";
 @import "typography";
 @import "flex";
