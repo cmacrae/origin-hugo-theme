@@ -1,4 +1,5 @@
 <nav class="navigation">
+    {{ if or .Params.tags .IsHome }}
     <div class="navigation__wrapper">
         <div class="navigation__container">
             <svg
@@ -29,7 +30,8 @@
                 {{end}}
             </ul>
         </div>
-        <div class="navigation__container">
+	{{end}}
+	<div class="navigation__container">
             <svg
                 width="240"
                 height="72"
