@@ -76,7 +76,8 @@
   code {
     padding: 1px 3px;
     border-radius: 2px;
-    color: var(--color-code-fg)
+    color: var(--color-code-fg);
+    font-family: $monospace;
   }
   pre {
     margin: 1rem 0;
